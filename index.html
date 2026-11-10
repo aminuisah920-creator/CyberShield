@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101010" />
+    <meta name="description" content="Learn about online safety and suspicious links." />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CyberShield — your safety, in one place</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#overview" aria-label="CyberShield home">
+          <span class="brand-mark" aria-hidden="true"><img src="icon.svg" alt="" /></span>
+          <span>Cyber<span class="brand-accent">Shield</span></span>
+        </a>
+        <p class="nav-label">YOUR SPACE</p>
+        <nav class="nav-links">
+          <a class="nav-link active" href="#overview"><span class="nav-icon">◈</span> Overview</a>
+          <a class="nav-link" href="#checklist"><span class="nav-icon">✓</span> Safety checklist <span class="nav-count" id="nav-count">0/4</span></a>
+          <a class="nav-link" href="#devices"><span class="nav-icon">▣</span> My devices</a>
+          <a class="nav-link" href="#alerts"><span class="nav-icon">⌁</span> Safety alerts <span class="nav-dot"></span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <div class="help-spark" aria-hidden="true">✦</div>
+            <strong>Need a hand?</strong>
+            <p>Get simple steps for staying safe online.</p>
+            <button class="text-button" data-open-help>Visit safety center <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="profile"><div class="avatar">Y</div><div><strong>Your space</strong><small>Personal protection</small></div><span class="profile-menu" aria-hidden="true">···</span></div>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="mobile-brand"><img src="icon.svg" alt="" /> Cyber<span>Shield</span></div>
+          <div class="breadcrumbs">Your space <span>/</span> <strong>Overview</strong></div>
+          <div class="topbar-actions"><span class="today-label" id="today-label"></span><button class="icon-button" aria-label="Open safety help" data-open-help>?</button></div>
+        </header>
+
+        <section class="welcome-row">
+          <div><p class="eyebrow">MONDAY, YOUR WAY</p><h1>A safer day starts here.</h1><p class="welcome-copy">A few small steps can make a big difference to your online safety.</p></div>
+          <div class="streak-pill"><span aria-hidden="true">✦</span> <strong>You're in control</strong></div>
+        </section>
+
+        <section class="overview-grid" aria-label="Your security overview">
+          <article class="score-card">
+            <div class="score-copy"><p class="card-kicker">YOUR SAFETY SNAPSHOT</p><h2>Looking good.<br /><span>Keep it up.</span></h2><p class="muted">Your score reflects the safety steps you’ve completed here. It isn’t a device scan.</p><a class="inline-link" href="#checklist">View your checklist <span aria-hidden="true">↗</span></a></div>
+            <div class="score-meter" aria-label="Safety checklist completion"><div class="meter-ring" id="meter-ring"><div class="meter-inner"><strong id="score-value">0</strong><span>OF 100</span></div></div><span class="meter-caption">SAFETY SCORE</span></div>
+            <div class="card-orb orb-one"></div><div class="card-orb orb-two"></div>
+          </article>
+          <article class="mini-stat"><div class="stat-top"><span class="stat-icon teal-icon">▣</span><span class="status-pill green-pill"><i></i> All yours</span></div><strong class="stat-number">3</strong><span class="stat-title">devices in your space</span><p class="stat-foot">You can review them below.</p></article>
+          <article class="mini-stat alert-stat"><div class="stat-top"><span class="stat-icon amber-icon">⌁</span><span class="status-pill amber-pill"><i></i> Be aware</span></div><strong class="stat-number" id="alert-count">2</strong><span class="stat-title">safety reminders</span><p class="stat-foot">Helpful tips, not live threat detection.</p></article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel checklist-panel" id="checklist">
+            <div class="panel-heading"><div><p class="card-kicker">MAKE YOUR NEXT MOVE</p><h2>Your safety checklist</h2></div><span class="completion-tag" id="completion-tag">0 of 4 done</span></div>
+            <p class="panel-intro">A few quick wins to help protect your accounts and devices.</p>
+            <div class="checklist-items">
+              <label class="check-item"><input type="checkbox" data-check="0" /><span class="checkmark" aria-hidden="true"></span><span class="check-copy"><strong>Turn on two-step verification</strong><small>Add another layer to your most important accounts.</small></span><span class="item-arrow" aria-hidden="true">↗</span></label>
+              <label class="check-item"><input type="checkbox" data-check="1" /><span class="checkmark" aria-hidden="true"></span><span class="check-copy"><strong>Install device updates</strong><small>Updates can fix known security weaknesses.</small></span><span class="item-arrow" aria-hidden="true">↗</span></label>
+              <label class="check-item"><input type="checkbox" data-check="2" /><span class="checkmark" aria-hidden="true"></span><span class="check-copy"><strong>Use unique passwords</strong><small>A password manager can help you remember them.</small></span><span class="item-arrow" aria-hidden="true">↗</span></label>
+              <label class="check-item"><input type="checkbox" data-check="3" /><span class="checkmark" aria-hidden="true"></span><span class="check-copy"><strong>Review account recovery options</strong><small>Make sure your recovery email and phone are current.</small></span><span class="item-arrow" aria-hidden="true">↗</span></label>
+            </div>
+            <div class="checklist-note"><span aria-hidden="true">✦</span> Your progress is saved only in this page while it’s open.</div>
+          </article>
+
+          <article class="panel devices-panel" id="devices">
+            <div class="panel-heading"><div><p class="card-kicker">YOUR CONNECTED LIFE</p><h2>Your devices</h2></div><button class="small-link" data-open-help>Safety tips <span aria-hidden="true">↗</span></button></div>
+            <p class="panel-intro">A personal list to help you remember what to keep updated.</p>
+            <div class="device-list">
+              <div class="device-row"><span class="device-icon laptop-icon" aria-hidden="true">▰</span><div class="device-info"><strong>Everyday laptop</strong><small>Computer · Added by you</small></div><span class="device-state"><i></i> Keep updated</span></div>
+              <div class="device-row"><span class="device-icon phone-icon" aria-hidden="true">▯</span><div class="device-info"><strong>Personal phone</strong><small>Mobile · Added by you</small></div><span class="device-state"><i></i> Keep updated</span></div>
+              <div class="device-row"><span class="device-icon tablet-icon" aria-hidden="true">▱</span><div class="device-info"><strong>Family tablet</strong><small>Tablet · Added by you</small></div><span class="device-state"><i></i> Keep updated</span></div>
+            </div>
+            <div class="device-disclaimer"><span>i</span> These are sample reminders—not live device checks.</div>
+          </article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel alerts-panel" id="alerts">
+            <div class="panel-heading"><div><p class="card-kicker">A LITTLE EXTRA AWARENESS</p><h2>Safety reminders</h2></div><span class="live-label"><i></i> LEARN &amp; PREPARE</span></div>
+            <div class="alert-item" id="alert-phish"><span class="alert-icon purple-alert" aria-hidden="true">✉</span><div class="alert-copy"><div class="alert-title-row"><strong>Unexpected delivery message?</strong><span class="alert-time">A QUICK TIP</span></div><p>Scammers may pretend to be delivery companies. Check the sender and visit the official site yourself instead of tapping an unexpected link.</p></div><button class="dismiss-button" data-dismiss="alert-phish" aria-label="Dismiss delivery message reminder">×</button></div>
+            <div class="alert-item" id="alert-code"><span class="alert-icon orange-alert" aria-hidden="true">#</span><div class="alert-copy"><div class="alert-title-row"><strong>Keep sign-in codes private</strong><span class="alert-time">REMEMBER</span></div><p>A real support agent should never ask you to read out a one-time sign-in code. Don’t share it with anyone.</p></div><button class="dismiss-button" data-dismiss="alert-code" aria-label="Dismiss sign-in code reminder">×</button></div>
+            <div class="alerts-footnote">Educational examples only. CyberShield does not monitor messages or detect active threats.</div>
+          </article>
+          <article class="emergency-card">
+            <div class="emergency-top"><span class="emergency-icon" aria-hidden="true">✳</span><span class="card-kicker">IF SOMETHING FEELS WRONG</span></div>
+            <h2>Pause. You have options.</h2><p>If you think an account is compromised, use a trusted device and go directly to the service’s official website.</p>
+            <button class="emergency-button" data-open-help>See what to do <span aria-hidden="true">→</span></button>
+            <div class="emergency-glow"></div>
+          </article>
+        </section>
+        <footer class="footer"><span>CyberShield <span class="footer-dot">·</span> Your safety, one step at a time</span><button data-open-help>Safety center</button><span class="footer-note">Not a security scanner or emergency service.</span></footer>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="help-modal" hidden>
+      <section class="help-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" aria-label="Close safety center" data-close-help>×</button>
+        <span class="modal-symbol" aria-hidden="true">✦</span><p class="card-kicker">CYBERSHIELD SAFETY CENTER</p><h2 id="modal-title">Small steps. More peace of mind.</h2>
+        <div class="modal-section"><strong>Not sure about a link?</strong><p>Don’t open it. Avoid pasting sensitive or suspicious links into tools you don’t trust. Visit the organization’s official website by typing its address yourself, or contact them using a number you already know.</p></div>
+        <div class="modal-section"><strong>Worried about an account?</strong><p>From a trusted device, go directly to the official service and change your password. Sign out other sessions if that option is available, turn on two-step verification, and contact the service through its official help page.</p></div>
+        <div class="modal-section"><strong>Lost money or shared personal information?</strong><p>Contact your bank or payment provider using the number on your card or their official website. If you’re in immediate danger, contact local emergency services. Report online fraud to the appropriate authority in your country.</p></div>
+        <p class="modal-disclaimer">CyberShield is an educational demo. It does not scan links, monitor devices, or provide emergency response.</p>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
